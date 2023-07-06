@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "login-ng-fea81": {
+      "hosting": {
+        "ProyectoFinal": [
+          "login-ng-fea81"
+        ]
+      }
+    }
+  }
+}

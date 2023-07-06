@@ -1,0 +1,29 @@
+<div class="bgded" style="background-image:url('https://images8.alphacoders.com/806/806420.jpg');">
+  <div id="pageintro" class="hoc clear">
+
+    <form [formGroup]="registerForm" (ngSubmit)="onRegister()" class="formulario">
+
+      <h1>Registrate</h1>
+       <div class="contenedor">
+
+       <div class="input-contenedor">
+           <input type="text" placeholder="Nombre Completo" formControlName="nombre">
+
+           </div>
+
+           <div class="input-contenedor">
+           <input type="text" placeholder="Correo Electronico" formControlName="email">
+
+           </div>
+
+           <div class="input-contenedor">
+           <input type="password" placeholder="Contraseña" formControlName="password">
+
+           </div>
+           <input type="submit" value="Registrate" class="button">
+           <p>Al registrarte, aceptas nuestras Condiciones de uso y Política de privacidad.</p>
+           <p>¿Ya tienes una cuenta?<a class="link" [routerLink]="['/login']">Iniciar Sesion</a></p>
+       </div>
+      </form>
+  </div>
+</div>

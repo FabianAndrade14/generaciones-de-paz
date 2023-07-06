@@ -1,0 +1,26 @@
+<div class="bgded" style="background-image:url('https://images8.alphacoders.com/806/806420.jpg');">
+    <div id="pageintro" class="hoc clear" *ngIf="user$ | async as user; else loading">
+  
+      <form class="formulario">
+        <h1> ¡Gracias por registrarte!</h1>
+         <div class="contenedor">
+  
+             <div>
+                <p> Hemos enviado un email de confirmación a <strong>{{ user?.email }}</strong></p>   
+             </div>
+
+             <div>
+                <p> Revisa tu correo electrónico y entra en el enlace para verificar tu cuenta</p>   
+             </div>
+             <br>
+
+             <button class="button" (click)="onSendEmail()"> Reenvía el correo de verificación </button>
+
+            </div>
+        </form>
+    </div>
+  </div>
+  
+  <ng-template #loading>
+    Loading...
+  </ng-template>

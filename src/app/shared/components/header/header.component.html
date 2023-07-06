@@ -1,0 +1,58 @@
+<div class="wrapper row0 bar-color">
+    <div id="topbar" class="hoc clear">
+
+      <ul class="nospace bar-color">
+        <li><i class="fa fa-envelope-o "></i> Generacionesdepaz1@gmail.com</li>
+        <li><a href="index.html"><i class="fa fa-lg fa-home bar-color"></i></a></li>
+        <li><a href="#" title="Ayuda"><i class="fa fa-life-bouy bar-color"></i></a></li>
+      </ul>
+
+    </div>
+  </div>
+
+  <div class="wrapper row1">
+    <header id="header" class="hoc clear">
+      <section>
+
+        <div class="center">
+          <i class="fa fa-phone">  (+57) 314 4404 712</i>
+        </div>
+
+        <!-- <div><i class="fa fa-phone"></i>(+57) 310 2075 955</div> -->
+
+        <div>
+          <h1 id="logo"><a routerLink="">
+            <img src="../../../../assets/images/gnp-sources/logo_4.png">
+          </a></h1>
+        </div>
+        <div>
+
+        </div>
+
+      </section>
+
+      <nav id="mainav" class="fuente-letra">
+
+        <ul class="clear" *ngIf="user$ | async as user; else login">
+          <li><a routerLink="">Inicio</a></li>
+          <li><a routerLink="juegos">Juegos Interactivos</a></li>
+          <li><a routerLink="about">Acerca de</a></li>
+          <li><a routerLink="cursos">Cursos en el colegio</a></li>
+          <li><a *ngIf="user">{{ user?.email }}</a></li>
+          <li><a *ngIf="user" (click)="onLogout()" routerLink="">Salir</a></li>
+        </ul>
+
+        <ng-template #login>
+        <ul class="clear">
+          <li><a routerLink="">Inicio</a></li>
+          <li><a routerLink="juegos">Juegos Interactivos</a></li>
+          <li><a routerLink="about">Acerca de</a></li>
+          <li><a routerLink="cursos">Cursos en el colegio</a></li>
+          <li><a *ngIf="!user" routerLink="login">Ingresa</a></li>
+          <li><a *ngIf="!user" routerLink="register">Registrate</a></li>
+        </ul>
+        </ng-template>
+
+      </nav>
+    </header>
+  </div>
